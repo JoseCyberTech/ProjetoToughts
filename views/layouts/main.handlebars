@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto: Thoughts</title>
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/css/styles.css">
+        <!--REMIXICONS-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+        <nav id="navbar">
+                <a href="/" id="logo">
+                <img src="/img/toughts_logo.png" alt="toughts">
+                </a>
+
+                <ul>
+                                <li><a href="/">Pensamentos</a></li>
+                                {{#if session.userid}}
+                                <li><a href="/toughts/dashboard">Dashboard</a></li>
+                                <li><a href="/logout">Sair</a></li>
+
+                                {{else}}
+                                <li><a href="/login">Entrar</a></li>
+                                <li><a href="/register">Registrar</a></li>
+                                {{/if}}
+                                
+                </ul>
+        </nav>
+        <div class="container">
+
+                <!--MESSAGES-->
+                {{#if messages.message}}
+                        <div class="message">
+                                {{messages.message}}
+                        </div>
+                {{/if}}
+                        {{{ body }}}
+
+        </div>
+
+        <footer>
+                <p>
+                        Projeto<span>Tought</span> &copy; 2023
+                </p>
+        </footer>
+</body>
+</html>
