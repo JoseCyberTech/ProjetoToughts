@@ -6,7 +6,6 @@ const Tought = db.define('Tougth', {
         title: {
                 type: DataTypes.STRING,
                 allowNull: false,
-                require: true
         }
 })
 

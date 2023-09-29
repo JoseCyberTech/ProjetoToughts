@@ -10,7 +10,7 @@ const FileStoreInstance = FileStore(session);
 import conn from './db/conn.mjs'
 
 // models
-import Tought from './models/Thought.mjs'
+import Tought from './models/Tought.mjs'
 import User from './models/User.mjs'
 
 // Import routes
@@ -64,6 +64,7 @@ app.use((req, res, next)=>{
 
         next()
 })
+
 
 //Routes
 app.use('/toughts', toughtRoutes)
